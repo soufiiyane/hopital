@@ -1,0 +1,150 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --background-color: #ecf0f1;
+  --text-color: #34495e;
+  --error-color: #e74c3c;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: var(--primary-color);
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+
+.App-header h1 {
+  margin: 0;
+}
+
+.logout-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.App-main {
+  padding: 20px;
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.patient-management,
+.patient-list {
+  width: 48%;
+}
+
+.patient-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.patient-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-edit, .btn-delete {
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+.btn-edit {
+  background-color: #f39c12;
+  color: white;
+}
+
+.btn-delete {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.error-message {
+  background-color: var(--error-color);
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.visualization {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.floor-plan,
+.patient-map {
+  width: 48%;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container,
+  .visualization {
+    flex-direction: column;
+  }
+
+  .patient-management,
+  .patient-list,
+  .floor-plan,
+  .patient-map {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
